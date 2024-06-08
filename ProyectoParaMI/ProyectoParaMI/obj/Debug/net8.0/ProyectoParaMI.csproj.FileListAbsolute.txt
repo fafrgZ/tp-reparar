@@ -1,0 +1,14 @@
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\obj\Debug\net8.0\ProyectoParaMI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\obj\Debug\net8.0\ProyectoParaMI.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\obj\Debug\net8.0\ProyectoParaMI.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\obj\Debug\net8.0\ProyectoParaMI.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\bin\Debug\net8.0\ProyectoParaMI.exe
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\bin\Debug\net8.0\ProyectoParaMI.deps.json
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\bin\Debug\net8.0\ProyectoParaMI.runtimeconfig.json
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\bin\Debug\net8.0\ProyectoParaMI.dll
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\bin\Debug\net8.0\ProyectoParaMI.pdb
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\obj\Debug\net8.0\ProyectoParaMI.dll
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\obj\Debug\net8.0\refint\ProyectoParaMI.dll
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\obj\Debug\net8.0\ProyectoParaMI.pdb
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\obj\Debug\net8.0\ProyectoParaMI.genruntimeconfig.cache
+C:\Users\Usuario\source\repos\ProyectoParaMI\ProyectoParaMI\obj\Debug\net8.0\ref\ProyectoParaMI.dll
