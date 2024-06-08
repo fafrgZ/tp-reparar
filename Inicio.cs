@@ -11,11 +11,27 @@ namespace Reparar
     {
         public static void Main()
         {
-            string valor = "";
-            int opcion = 0;
+            ArrayList empleados = new ArrayList();
 
-            Console.WriteLine("Hola como estas soy Sosa Gonzalo Agustin");
+            while (true)
+            {
+                MostrarMenu();
 
+                int opcion = ObtenerOpcion();
+
+                EjecutarOpcion(opcion);
+
+                Console.WriteLine("\nPresione cualquier tecla para regresar al menú principal...");
+                Console.ReadKey();
+                Console.Clear();
+
+            }
+        }
+
+
+        static void MostrarMenu()
+        {
+            Console.WriteLine("Menú Principal:");
             Console.WriteLine("1- Establecer e informar las variables de sueldos");
             Console.WriteLine("2- Registrar un empleado");
             Console.WriteLine("3- Listado de Empleados");
@@ -24,17 +40,32 @@ namespace Reparar
             Console.WriteLine("6- Asignar un obrero en una obra.");
             Console.WriteLine("7- Listado completo de una obra");
             Console.WriteLine("8- Eliminar un profesional de la empresa");
-            Console.WriteLine("Que operación desea hacer?");
+            Console.WriteLine("Seleccione una opcion:");
+        }
 
-            valor = Console.ReadLine();
-            opcion = Convert.ToInt32(valor);
+        static int ObtenerOpcion()
+        {
+            int opcion;
+            while (!int.TryParse(Console.ReadLine(), out opcion) || opcion < 1 || opcion > 8)
+            {
+                Console.WriteLine("Opción inválida. Por favor, intente de nuevo.");
+                Console.Write("Seleccione una opción: ");
+            }
+            return opcion;
+        }
 
+        static void EjecutarOpcion(int opcion)
+        {
             switch (opcion)
             {
-
                 case 1:
                     //Funcion 1
+                    //Establecer e informar las variables de sueldos (el monto de referencia definido por el sindicato y el canon
+                    //universal para el pago de la matrícula profesional) y los datos y haber mensual de todos los empleados
+                    //registrados en la empresa.
+
                     Console.WriteLine("Usted eligió la opción 1");
+                    InformarSueldos(); 
                     break;
 
                 case 2:
@@ -75,6 +106,17 @@ namespace Reparar
                 default:
                     Console.WriteLine("Opción no valida");
                     break;
+            }
+        }
+
+
+
+        static public void InformarSueldos(ArrayList empelados)
+        {
+
+            foreach (Empleado empleado in empleados)
+            {
+                Console.WriteLine($"Empleado: {empleado.Nombre}, Sueldo: {empleado.Sueldo}");
             }
         }
     }

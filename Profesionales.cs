@@ -40,5 +40,18 @@ namespace Reparar
             get { return Sueldo; }
             set { Sueldo = value; }
         }
+
+
+        //SOLANA
+
+        public override void CalcularSueldo()
+        {
+            float sueldoBase = base.CalcularSueldo();
+
+            //prueba
+            float sueldoProfesional = sueldoBase+100
+            Console.WriteLine($"El sueldo es:{0}", sueldoProfesional);
+
+        }
     }
 }

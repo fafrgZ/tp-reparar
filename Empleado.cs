@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,18 @@ namespace Reparar
         private string Apellido;
         private ulong Legajo;
 
-        public Empleado(string Nom, string Ape, ulong Leg)
+
+        private float Sueldo;
+
+        public Empleado(string Nom, string Ape, ulong Leg, float Sld)
         {
             Nombre = Nom;
             Apellido = Ape;
             Legajo = Leg;
+
+
+            Sueldo = Sld;
+
         }
 
         public string nombre
@@ -35,5 +43,20 @@ namespace Reparar
             set { Legajo = value; }
         }
 
+
+
+        public float sueldo
+        {
+            get { return Sueldo; }
+            set { Sueldo = value; }
+        }
+
+        virtual public void CalcularSueldo()
+        {
+            return Sueldo; 
+        }
+
+
     }
+
 }
