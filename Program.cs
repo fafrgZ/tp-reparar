@@ -9,9 +9,26 @@ namespace Reparar
 {
     class Inicio
     {
+        ArrayList Empleados2 = new ArrayList()
+            {
+                new Empleado("Juan","Perez", 1234, 2500.50f),
+                new Empleado("Solana","Azcurra", 1235, 2500.50f),
+                new Empleado("Rocio","Torres", 1236, 2500.50f),
+                new Empleado("Miguel","Rodriguez", 1237, 2500.50f),
+                new Profesional("arq", 789, "consejo", "Dolores","Ruiz", 1238, 100.4f)
+            };
         public static void Main()
         {
-            ArrayList empleados = new ArrayList();
+            ArrayList Empleados = new ArrayList()
+            {
+                new Empleado("Juan","Perez", 1234, 2500.50f),
+                new Empleado("Solana","Azcurra", 1235, 2500.50f),
+                new Empleado("Rocio","Torres", 1236, 2500.50f),
+                new Empleado("Miguel","Rodriguez", 1237, 2500.50f),
+                new Profesional("arq", 789, "consejo", "Dolores","Ruiz", 1238, 100.4f)
+            };
+
+
 
             while (true)
             {
@@ -19,7 +36,7 @@ namespace Reparar
 
                 int opcion = ObtenerOpcion();
 
-                EjecutarOpcion(opcion);
+                EjecutarOpcion(opcion, Empleados);
 
                 Console.WriteLine("\nPresione cualquier tecla para regresar al menú principal...");
                 Console.ReadKey();
@@ -54,7 +71,7 @@ namespace Reparar
             return opcion;
         }
 
-        static void EjecutarOpcion(int opcion)
+        static void EjecutarOpcion(int opcion, ArrayList emp)
         {
             switch (opcion)
             {
@@ -63,9 +80,8 @@ namespace Reparar
                     //Establecer e informar las variables de sueldos (el monto de referencia definido por el sindicato y el canon
                     //universal para el pago de la matrícula profesional) y los datos y haber mensual de todos los empleados
                     //registrados en la empresa.
-
                     Console.WriteLine("Usted eligió la opción 1");
-                    InformarSueldos(); 
+                    InformarSueldos(emp);
                     break;
 
                 case 2:
@@ -109,15 +125,21 @@ namespace Reparar
             }
         }
 
-
-
-        static public void InformarSueldos(ArrayList empelados)
+        static public void InformarSueldos(ArrayList ListaEmpleados)
         {
-
-            foreach (Empleado empleado in empleados)
+            foreach (Empleado empleado in ListaEmpleados)
             {
-                Console.WriteLine($"Empleado: {empleado.Nombre}, Sueldo: {empleado.Sueldo}");
+                empleado.CalcularSueldo();
             }
         }
+        static public void eliminarEmpleado(string nombre)
+        {
+            var empleado = Empleados2.Find(e => e.Nombre == nombre);
+            e.Remove(empleado);
+
+
+        }
+
+
     }
 }

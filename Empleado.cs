@@ -51,11 +51,10 @@ namespace Reparar
             set { Sueldo = value; }
         }
 
-        virtual public void CalcularSueldo()
+        public virtual void CalcularSueldo()
         {
-            return Sueldo; 
+            Console.WriteLine("Sueldo percibido: {0}", sueldo + 100) ;
         }
-
 
     }
 
